@@ -1,0 +1,241 @@
+@import 'basic.scss';
+
+// ** Your Style goes here **
+
+// ! ----- Core Style Rules -----
+
+body {
+    font-size: $font-size-step-300;
+    line-height: $space-s-m; // 1.6rem
+    text-shadow: 0 0.05rem 0.2rem rgba($dark-black, 0.2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $BigNoodle;
+    line-height: $space-xs-s; // 1.2rem
+    margin-bottom: $space-m; // 2rem
+
+}
+
+h1 {
+    font-size: $font-size-step-800; 
+}
+
+h2 {
+    font-size: $font-size-step-700; 
+}
+
+h3 {
+    font-size: $font-size-step-600; 
+}
+
+h4 {
+    font-size: $font-size-step-500; 
+}
+
+h5 {
+    font-size: $font-size-step-400; 
+}
+
+h6 {
+    font-size: $font-size-step-300; 
+}
+
+// ------------- Media Queries -------------
+
+html {
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    html,
+    body {
+        background-color: $bg-color;
+        color: $text-color;
+    }
+
+    a, i {
+        color: $text-color;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    html,
+    body {
+        background-color: $text-color;
+        color: $bg-color;
+    }
+
+    a {
+        color: $bg-color;
+    }
+}
+
+// ! ----- Main Styles -----
+
+body {
+    background: linear-gradient(235deg, $prime-blue 50%, $neon-magenta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 26rem;
+    z-index: 2;
+
+    & .box {
+        position: relative;
+        width: 26rem;
+        border-radius: 1rem;
+        background: $pure-white;
+        padding: $space-m;
+        box-shadow: 0 0.2rem 0.5rem rgba($dark-black, 0.2);
+        
+        & h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $text-color-fliped;
+            margin-top: $space-xs;
+
+            & i {
+                font-size: $font-size-step-700;
+                color: $text-color-fliped;
+                margin-right: $space-xs;
+            }
+        }
+    }
+
+    & .list_items {
+        position: relative;
+        top: -2rem;
+        padding: 65px $space-m $space-s;
+        width: 100%;
+        min-height: 27.1rem;
+        border-radius: 1rem;
+        overflow-x: auto;
+        background: $pure-white repeating-linear-gradient(transparent 0%, transparent 99%, $grey-50 99%, $grey-50 100%);
+        background-size: 1px 50px;
+        z-index: -1;
+        box-shadow: 0 0.2rem 0.5rem rgba($dark-black, 0.2);
+        
+        &::-webkit-scrollbar {
+            width: 0.5rem;
+        }
+
+        &::-webkit-scrollbar-track {
+            border-radius: 0.5rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $prime-green;
+            border-radius: 0.5rem;
+        }
+
+        & input {
+            position: relative;
+            background: $grey-20;
+            color: $text-color-fliped;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            font-size: $font-size-step-400;
+            top: -0.6rem;
+        }
+
+        & li {
+            position: relative;
+            height: 50px;
+            color: $text-color-fliped;
+            font-size: $font-size-step-400;
+            font-weight: 500;
+            
+            & p {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                & .crud {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100px;
+
+                    & i {
+                        color: $text-color-fliped;
+                        
+                        &:hover {
+                            cursor: pointer;
+                            transform: scale(1.1);
+                            transition: 0.3s ease-out;
+                            text-shadow: 0 0.05rem 0.3rem rgba($dark-black, 0.2);
+                        }
+
+                        &:nth-child(1) {
+                            color: $prime-green;
+                        }
+                        &:nth-child(2) {
+                            color: $neon-magenta;
+                        }
+                        &:nth-child(3) {
+                            color: $neon-red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.done {
+    color: $grey-50;
+}
+
+.crud {
+    text-decoration: none;
+}
+
+#grocery {
+    position: relative;
+
+    & #writeList {
+        position: relative;
+        width: calc(100% - 1.5rem);
+        height: 3rem;
+        padding: $space-xs;
+        border-radius: 0.5rem 0 0 0.5rem;
+        background: $grey-20;
+        color: $text-color-fliped;
+        font-size: $font-size-step-400;
+        margin-bottom: $space-xs;
+    }
+
+    & #btn-AddGrocery {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 3rem;
+        height: 3rem;
+        padding: $space-xs;
+        border-radius: 100%;
+        border: 0.3rem solid $pure-white;
+        background: $prime-green;
+        color: $text-color-fliped;
+        font-size: $font-size-step-400;
+        margin-bottom: $space-xs;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & i {
+            font-size: $font-size-step-500;
+            color: $pure-white;
+        }
+    }
+}

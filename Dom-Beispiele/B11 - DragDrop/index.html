@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- Definiert den Dokumenttyp und die HTML-Version -->
+<html lang="en">
+    <!-- Wurzelelement eines HTML-Dokuments, das die Sprache des Dokuments angibt -->
+
+    <head>
+        <!-- Enthält Metainformationen, die nicht im Body-Element angezeigt werden -->
+        <meta charset="UTF-8" />
+        <!-- Definiert die Zeichenkodierung für das Dokument -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Stellt sicher, dass das Layout auf allen Geräten gut aussieht -->
+        <link rel="stylesheet" href="style.css" />
+        <!-- Verknüpft das CSS-Stylesheet mit dem HTML-Dokument -->
+        <script src="script.js" defer></script>
+        <!-- Bindet eine externe JavaScript-Datei ein, deren Ausführung bis zum Ende der Seite verzögert wird -->
+        <title>Document</title>
+        <!-- Definiert den Titel des Dokuments, der in der Titelleiste des Browsers angezeigt wird -->
+        <style>
+            div {
+                padding: 5%; <!-- Setzt das Padding aller div-Elemente auf 5% -->
+                border: 1px solid black; <!-- Setzt den Rand aller div-Elemente auf 1px solid schwarz -->
+            }
+        </style>
+        <!-- Definiert interne CSS-Styles -->
+    </head>
+
+    <body>
+        <!-- Enthält den sichtbaren Inhalt der Webseite -->
+
+        <div id="draggable" draggable="true" ondragstart="drag(event)">
+            <!-- Erstellt ein ziehbares Element -->
+            Drag me!
+            <!-- Textinhalt des ziehbaren Elements -->
+        </div>
+
+        <!-- Führt die Funktion 'drop' aus, wenn ein Element abgelegt wird -->
+        <!-- Erlaubt das Ablegen von Elementen durch Ausführen der Funktion 'allowDrop' -->
+        <div
+            id="droppable"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+        ></div>
+
+        <!-- Definiert die Funktion 'drag', die beim Start des Ziehvorgangs ausgeführt wird -->
+        <!-- Legt die Daten fest, die während des Ziehvorgangs übertragen werden sollen -->
+        <!-- Definiert die Funktion 'allowDrop', die das Standardverhalten des 'ondragover'-Ereignisses verhindert -->
+        <!-- Definiert die Funktion 'drop', die beim Ablegen eines Elements ausgeführt wird -->
+        <!-- Verhindert das Standardverhalten des 'ondrop'-Ereignisses -->
+        <!-- Holt die Daten, die während des Ziehvorgangs übertragen wurden -->
+        <!-- Fügt das gezogene Element zum Ziel-Element hinzu -->
+        <script>
+            function drag(event) {
+                event.dataTransfer.setData('Text', event.target.id);
+            }
+
+            function allowDrop(event) {
+                event.preventDefault();
+            }
+
+            function drop(event) {
+                event.preventDefault();
+                let data = event.dataTransfer.getData('Text');
+                event.target.appendChild(document.getElementById(data));
+            }
+        </script>
+        <!-- Definiert interne JavaScript-Funktionen -->
+    </body>
+</html>

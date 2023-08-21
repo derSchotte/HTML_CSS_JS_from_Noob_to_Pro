@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Erstellt einen Button, der die Funktion "addClass" aufruft, wenn er geklickt wird -->
+        <button onclick="addClass()">Klassen hinzufügen</button>
+
+        <!-- Ein div-Element mit einer bestimmten ID -->
+        <div id="content">Einige Inhalte....</div>
+
+        <style>
+            /* Definiert eine CSS-Klasse namens "highlight" mit verschiedenen Stilen */
+            .highlight {
+                background-color: #011016; /* Hintergrundfarbe */
+                color: #fff; /* Textfarbe */
+                padding: 5%; /* Innenabstand */
+                border-radius: 12px; /* Eckenradius */
+            }
+        </style>
+
+        <script>
+            // Definiert die Funktion "addClass"
+            function addClass() {
+                // Fügt dem div-Element mit der ID "content" die Klasse "highlight" hinzu
+                document.getElementById('content').classList.add('highlight');
+            }
+        </script>
+    </body>
+</html>

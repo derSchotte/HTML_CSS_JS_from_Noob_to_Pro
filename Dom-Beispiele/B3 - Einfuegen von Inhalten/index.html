@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Erstellt einen Button, der die Funktion "addElement" aufruft, wenn er geklickt wird -->
+        <button onclick="addElement()">Element hinzufügen</button>
+
+        <!-- Ein div-Element mit der ID "content", in dem neue Elemente hinzugefügt werden -->
+        <div id="content"></div>
+
+        <script>
+            // Definiert die Funktion "addElement"
+            function addElement() {
+                // Erstellt ein neues Absatzelement
+                let para = document.createElement('p');
+                // Erstellt einen neuen Textknoten
+                let node = document.createTextNode('Das ist ein neuer Absatz.');
+                // Fügt den Textknoten zum Absatzelement hinzu
+                para.appendChild(node);
+
+                // Findet das div-Element mit der ID "content"
+                let element = document.getElementById('content');
+                // Fügt das neue Absatzelement zum div-Element hinzu
+                element.appendChild(para);
+            }
+        </script>
+    </body>
+</html>

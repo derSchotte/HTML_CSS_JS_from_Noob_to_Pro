@@ -1,0 +1,305 @@
+/* ------------- Color Variables ------------- */
+:root {
+    --dark-greyish-blue: #17141c;
+    --dark-grey-blue: #011016;
+    --dark-black: #051015;
+    --grey-10: #f5f5f5;
+    --grey-20: #ebebeb;
+    --grey-30: #e1e1e1;
+    --grey-40: #d7d7d7;
+    --grey-50: #cdcdcd;
+    --grey-60: #c3c3c3;
+    --grey-100: #a6a6a6;
+    --grey-200: #8a8a8a;
+    --grey-300: #6e6e6e;
+    --grey-400: #525252;
+    --grey-500: #363636;
+    --grey-600: #1e1e1e;
+    --grey-700: #020202;
+    --greyish-white: #dcdcdc;
+    --prime-orange: #ff8a00;
+    --prime-red: #dc2200;
+    --prime-dark-red: #ad1a00;
+    --prime-green: #3ecc13;
+    --prime-dark-green: #28a103;
+    --prime-blue: #39bbeb;
+    --prime-dark-blue: #179ccc;
+    --special: #924cff;
+    --neon-lite-cyan: #4deeea;
+    --neon-cyan: #00c6fb;
+    --neon-lite-green: #74ee15;
+    --neon-green: #00ff00;
+    --neon-lite-yellow: #ffe700;
+    --neon-yellow: #ffcc00;
+    --neon-lite-magenta: #f000ff;
+    --neon-magenta: #ff00ff;
+    --neon-lite-red: #ff006e;
+    --neon-red: #ff0000;
+}
+/* ** FiraCode ** */
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-Regular.ttf) format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-Medium.ttf) format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-SemiBold.ttf) format('truetype');
+    font-weight: 550;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-Bold.ttf) format('truetype');
+    font-weight: 600;
+}
+
+    /* ** BigNoodle ** */
+
+@font-face {
+    font-family: 'BigNoodle';
+    src: url(../../assets/fonts/big_noodle_titling.ttf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'BigNoodle';
+    src: url(../../assets/fonts/big_noodle_titling_oblique.ttf) format('truetype');
+    font-weight: 600;
+}
+
+/* ** Raleway ** */
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Thin.ttf) format('truetype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-ExtraLight.ttf) format('truetype');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Regular.ttf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Medium.ttf) format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Bold.ttf) format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-ExtraBold.ttf) format('truetype');
+    font-weight: 800;
+}
+
+/* ------------- Basic Styles ------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    color: var(--greyish-white);
+}
+
+html,
+body {
+    font-family: 'Raleway', 'FiraCode', monospace;
+    font-weight: 400;
+    line-height: 1.5rem;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.05rem;
+    overflow-x: hidden;
+    background-color: var(--dark-greyish-blue);
+}
+
+img,
+video,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ------------- Main Styles ------------- */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#navbar {
+    position: relative;
+    width: 400px;
+    height: 70px;
+    background-color: var(--grey-20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+}
+
+#navbar ul > li {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.3s ease;
+}
+
+#navbar ul > li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+}
+
+#navbar a > span, a > span i {
+    color: var(--dark-black);
+}
+
+#navbar a > .icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: 0.5s ease-out;
+}
+
+#navbar ul li.active > a .icon {
+    transform: translateY(-32px);
+}
+
+#navbar ul li.active > a .icon > i {
+color: var(--grey-20);
+}
+
+#navbar a > .text {
+    position: absolute;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    transform: translateY(20px);
+    transition: 0.5s ease-out;
+    opacity: 0;
+}
+
+#navbar ul li.active > a .text {
+    opacity: 1;
+    transform: translateY(15px);
+}
+
+#indicator {
+    position: absolute;
+    top: -35px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--clr);
+    border-radius: 50%;
+    border: 6px solid var(--dark-greyish-blue);
+    transition: 0.3s ease-in-out;
+}
+
+#indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    border-radius: 0 20px 0 0;
+    box-shadow: 0 -10px 0 0px var(--dark-greyish-blue);
+}
+
+#indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px 0 0 0;
+    box-shadow: 0 -10px 0 0px var(--dark-greyish-blue);
+}
+
+#navbar ul > li:nth-child(1).active a .icon i,
+#navbar ul > li:nth-child(4).active a .icon i {
+    color: var(--dark-black);
+}
+#navbar ul > li:nth-child(1).active ~ #indicator {
+    transform: translateX(calc(0 * 70px));
+    background: var(--neon-green);
+}
+#navbar ul > li:nth-child(2).active ~ #indicator {
+    transform: translateX(calc(1 * 70px));
+    background: var(--neon-cyan);
+}
+#navbar ul > li:nth-child(3).active ~ #indicator {
+    transform: translateX(calc(2 * 70px));
+    background: var(--neon-magenta);
+}
+#navbar ul > li:nth-child(4).active ~ #indicator {
+    transform: translateX(calc(3 * 70px));
+    background: var(--neon-yellow);
+}
+#navbar ul > li:nth-child(5).active ~ #indicator {
+    transform: translateX(calc(4 * 70px));
+    background: var(--neon-red);
+}

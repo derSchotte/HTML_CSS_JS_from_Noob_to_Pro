@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="icon"
+            href="../../assets/images/Letter-F.svg"
+            type="image/svg+xml"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        />
+        <script src="script.js" defer></script>
+        <title>Animated Navbar with Indicator</title>
+    </head>
+    <body>
+        <!-- header>nav#navbar>ul>li.list*5>a>span.icon+span.text -->
+        <header>
+            <nav id="navbar">
+                <ul>
+                    <li class="list active">
+                        <a href="#home"
+                            ><span class="icon"
+                                ><i class="bi bi-house"></i></span
+                            ><span class="text">Home</span></a
+                        >
+                    </li>
+                    <li class="list">
+                        <a href="#about"
+                            ><span class="icon"
+                                ><i class="bi bi-file-person"></i></span
+                            ><span class="text">About</span></a
+                        >
+                    </li>
+                    <li class="list">
+                        <a href="#search"
+                            ><span class="icon"
+                                ><i class="bi bi-search"></i></span
+                            ><span class="text">Search</span></a
+                        >
+                    </li>
+                    <li class="list">
+                        <a href="#setting"
+                            ><span class="icon"
+                                ><i class="bi bi-sliders"></i></span
+                            ><span class="text">Setting</span></a
+                        >
+                    </li>
+                    <li class="list">
+                        <a href="#contact"
+                            ><span class="icon"
+                                ><i class="bi bi-envelope"></i></span
+                            ><span class="text">Contact</span></a
+                        >
+                    </li>
+                    <div id="indicator"></div>
+                </ul>
+            </nav>
+        </header>
+    </body>
+</html>

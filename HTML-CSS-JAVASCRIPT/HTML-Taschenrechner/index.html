@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Verknüpft die externe CSS-Datei "style.css" -->
+        <link rel="stylesheet" href="style.css" />
+        <!-- Verknüpft die externe JavaScript-Datei "script.js" und definiert das Verhalten als "deferred" -->
+        <script src="script.js" defer></script>
+        <!-- Titel des Dokuments -->
+        <title>Taschenrechner</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Überschrift für den Taschenrechner -->
+            <h1>Taschenrechner</h1>
+            <div id="calculator">
+                <!-- Label für das Eingabefeld "display" -->
+                <label for="display" />
+                <!-- Eingabefeld "display" für die Eingabe von Zahlen -->
+                <input type="text" id="display" value="" disabled />
+                <!-- Eingabefeld "displayResult" zur Anzeige des Ergebnisses -->
+                <input type="text" id="displayResult" value="" disabled />
+                <div id="buttons">
+                    <!-- Button für den Prozentwert -->
+                    <button id="percent">%</button>
+                    <!-- Button zum Löschen des aktuellen Eintrags -->
+                    <button id="clearEntry">CE</button>
+                    <!-- Button zum Löschen aller Einträge -->
+                    <button id="clear">C</button>
+                    <!-- Button für die Division -->
+                    <button class="operator" value="/">/</button>
+                    <!-- Button für die Zahl 7, 8, 9-->
+                    <button class="num" value="7">7</button>
+                    <button class="num" value="8">8</button>
+                    <button class="num" value="9">9</button>
+                    <!-- Button für die Multiplikation -->
+                    <button class="operator" value="*">*</button>
+                    <!-- Button für die Zahl 4, 5, 6 -->
+                    <button class="num" value="4">4</button>
+                    <button class="num" value="5">5</button>
+                    <button class="num" value="6">6</button>
+                    <!-- Button für die Subtraktion -->
+                    <button class="operator" value="-">-</button>
+                    <!-- Button für die Zahl 1, 2, 3 -->
+                    <button class="num" value="1">1</button>
+                    <button class="num" value="2">2</button>
+                    <button class="num" value="3">3</button>
+                    <!-- Button für die Addition -->
+                    <button class="operator" value="+">+</button>
+                    <!-- Button zum Wechseln des Vorzeichens -->
+                    <button id="plusMinus">+/-</button>
+                    <!-- Button für die Zahl 0 -->
+                    <button class="num" value="0">0</button>
+                    <!-- Button für das Dezimaltrennzeichen -->
+                    <button class="num" value=".">,</button>
+                    <!-- Button zum Ausführen der Berechnung -->
+                    <button id="equals">=</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Ein Button, der die Funktion "resizeElement" aufruft, wenn er geklickt wird -->
+        <button onclick="resizeElement()">Elementgröße ändern</button>
+
+        <!-- Ein div-Element mit der ID "box" und spezifischen Stilen -->
+        <div
+            id="box"
+            style="width: 100px; height: 100px; background: red;"
+        ></div>
+
+        <script>
+            // Definiert die Funktion "resizeElement"
+            function resizeElement() {
+                // Speichert das div-Element mit der ID "box" in einer Variablen
+                let box = document.getElementById('box');
+
+                // Ändert die Breite des Elements auf 200px
+                box.style.width = '200px';
+
+                // Ändert die Höhe des Elements auf 200px
+                box.style.height = '200px';
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,347 @@
+/* ------------- Color Variables ------------- */
+:root {
+    --dark-greyish-blue: #17141c;
+    --dark-grey-blue: #011016;
+    --dark-black: #051015;
+    --grey-10: #f5f5f5;
+    --grey-20: #ebebeb;
+    --grey-30: #e1e1e1;
+    --grey-40: #d7d7d7;
+    --grey-50: #cdcdcd;
+    --grey-60: #c3c3c3;
+    --grey-100: #a6a6a6;
+    --grey-200: #8a8a8a;
+    --grey-300: #6e6e6e;
+    --grey-400: #525252;
+    --grey-500: #363636;
+    --grey-600: #1e1e1e;
+    --grey-700: #020202;
+    --greyish-white: #dcdcdc;
+    --prime-orange: #ff8a00;
+    --prime-red: #dc2200;
+    --prime-dark-red: #ad1a00;
+    --prime-green: #3ecc13;
+    --prime-dark-green: #28a103;
+    --prime-blue: #39bbeb;
+    --prime-dark-blue: #179ccc;
+    --special: #924cff;
+    --neon-lite-cyan: #4deeea;
+    --neon-cyan: #00c6fb;
+    --neon-lite-green: #74ee15;
+    --neon-green: #00ff00;
+    --neon-lite-yellow: #ffe700;
+    --neon-yellow: #ffcc00;
+    --neon-lite-magenta: #f000ff;
+    --neon-magenta: #ff00ff;
+    --neon-lite-red: #ff006e;
+    --neon-red: #ff0000;
+}
+/* ** FiraCode ** */
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-Regular.ttf) format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-Medium.ttf) format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-SemiBold.ttf) format('truetype');
+    font-weight: 550;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-Bold.ttf) format('truetype');
+    font-weight: 600;
+}
+
+/* ** BigNoodle ** */
+
+@font-face {
+    font-family: 'BigNoodle';
+    src: url(../../assets/fonts/big_noodle_titling.ttf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'BigNoodle';
+    src: url(../../assets/fonts/big_noodle_titling_oblique.ttf) format('truetype');
+    font-weight: 600;
+}
+
+/* ** Raleway ** */
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Thin.ttf) format('truetype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-ExtraLight.ttf) format('truetype');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Regular.ttf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Medium.ttf) format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Bold.ttf) format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-ExtraBold.ttf) format('truetype');
+    font-weight: 800;
+}
+
+/* ------------- Basic Styles ------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    color: var(--greyish-white);
+}
+
+html,
+body {
+    font-family: 'Raleway', 'FiraCode', monospace;
+    font-weight: 400;
+    line-height: 1.5rem;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.05rem;
+    overflow-x: hidden;
+    background-color: var(--dark-greyish-blue);
+}
+
+img,
+video,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ------------- Main Styles ------------- */
+
+/* LOADER */
+@property --rotate {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.loader1 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: repeating-conic-gradient(from var(--rotate), var(--clr) 0%, var(--clr) 5%, transparent 5%, transparent 40%, var(--clr) 100%);
+    border-radius: 50%;
+    animation: rotate 2s linear infinite;
+}
+
+.loader1::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: var(--dark-greyish-blue);
+    border-radius: 50%;
+}
+
+.loader1 span {
+    position: absolute;
+    inset: 0;
+    animation: rotate1 2s linear infinite;
+}
+    
+.loader1 span::before {
+    content: '';
+    position: absolute;
+    left: 94px;
+    top: 2px;
+    width: 10px;
+    height: 10px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--clr), 0 0 20px var(--clr), 0 0 40px var(--clr);
+}
+
+@keyframes rotate {
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* LINK BUTTON */
+.btn {
+    position: relative;
+    text-decoration: none;
+    padding: 15px 30px;
+    background: repeating-conic-gradient(from var(--rotate), var(--clr1) 0%, var(--clr1) 5%, transparent 5%, transparent 40%, var(--clr1) 50%);
+    animation: rotate 2s linear infinite;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--rotate), var(--clr2) 0%, var(--clr2) 5%, transparent 5%, transparent 40%, var(--clr2) 50%);
+    animation: rotate 2s linear infinite;
+    animation-delay: -0.5s;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.btn:hover::before {
+    opacity: 1;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: var(--dark-greyish-blue);
+}
+
+.btn span {
+    position: relative;
+    z-index: 1;
+    color: var(--greyish-white);
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover span {
+    letter-spacing: 0.24rem;
+    color: var(--clr2)
+}
+
+/* LOADER 2 */
+.loader2 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: repeating-conic-gradient(from var(--rotate), var(--clr1) 0%, var(--clr1) 5%, transparent 5%, transparent 60%, var(--clr1) 100%);
+    animation: rotate 4s linear infinite;
+    border-radius: 50%;
+}
+
+.loader2::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--rotate), var(--clr2) 0%, var(--clr2) 5%, transparent 5%, transparent 60%, var(--clr2) 100%);
+    animation: rotate 4s linear infinite;
+    animation-delay: -2s;
+    border-radius: 50%;
+}
+
+.loader2 span {
+    position: absolute;
+    inset: 0;
+    animation: rotate1 4s linear infinite;
+}
+
+.loader2 span::before {
+    content: '';
+    position: absolute;
+    left: 92px;
+    top: 4px;
+    width: 9px;
+    height: 9px;
+    background: var(--clr1);
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--clr1), 0 0 20px var(--clr1), 0 0 40px var(--clr1);
+}
+
+.loader2 span::after {
+    content: '';
+    position: absolute;
+    right: 92px;
+    bottom: 4px;
+    width: 9px;
+    height: 9px;
+    background: var(--clr2);
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--clr2), 0 0 20px var(--clr2), 0 0 40px var(--clr2);
+}
+
+.loader2::after {
+    content: '';
+    position: absolute;
+    inset: 9px;
+    background: var(--dark-greyish-blue);
+    border-radius: 50%;
+}

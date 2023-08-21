@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Erstellt einen Button, der die Funktion "changeColor" aufruft, wenn er geklickt wird -->
+        <button onclick="changeColor()">Farben ändern</button>
+
+        <!-- Ein Absatz mit der ID "text", der den initialen Text "Der Text, dessen Farbe geändert wird." anzeigt -->
+        <p id="text">Der Text, dessen Farbe geändert wird.</p>
+
+        <script>
+            // Definiert die Funktion "changeColor"
+            function changeColor() {
+                // Ändert die Textfarbe des Absatzes mit der ID "text" zu rot
+                document.getElementById('text').style.color = 'red';
+            }
+        </script>
+    </body>
+</html>

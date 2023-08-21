@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- <button onclick="moveElement()">Element bewegen</button>
+
+        <div
+            id="box"
+            style="
+                width: 50px;
+                height: 50px;
+                background: red;
+                position: absolute;
+                left: 0;
+            "
+        ></div>
+
+        <script>
+            function moveElement() {
+                let box = document.getElementById('box');
+                box.style.left = parseInt(box.style.left) + 10 + 'px';
+            }
+        </script> -->
+
+        <div id="box" <!-- Gibt dem Element eine eindeutige id -->
+            style=" width: 50px;
+            <!-- Setzt die Breite des Elements auf 50px -->
+            height: 50px;
+            <!-- Setzt die Höhe des Elements auf 50px -->
+            background: red;
+            <!-- Setzt die Hintergrundfarbe des Elements auf Rot -->
+            position: absolute;
+            <!-- Positioniert das Element absolut zum nächsten positionierten Vorfahren (anstatt positioniert zum Viewport) -->
+            left: 50px;
+            <!-- Positioniert das linke Rand des Elements 50px entfernt vom linken Rand seines Elternelements -->
+            top: 200px;
+            <!-- Positioniert den oberen Rand des Elements 200px entfernt vom oberen Rand seines Elternelements -->
+            right: 0px;
+            <!-- Positioniert das rechte Rand des Elements 0px entfernt vom rechten Rand seines Elternelements -->
+            bottom: 0px;
+            <!-- Positioniert den unteren Rand des Elements 0px entfernt vom unteren Rand seines Elternelements -->
+            " >
+        </div>
+
+        <button onclick="oben()">Oben</button>
+        <!-- Erstellt einen Button, der die Funktion 'oben' ausführt, wenn er geklickt wird -->
+        <button onclick="lefty()">links</button>
+        <!-- Erstellt einen Button, der die Funktion 'lefty' ausführt, wenn er geklickt wird -->
+        <button onclick="rechts()">rechts</button>
+        <!-- Erstellt einen Button, der die Funktion 'rechts' ausführt, wenn er geklickt wird -->
+        <button onclick="unten()">unten</button>
+        <!-- Erstellt einen Button, der die Funktion 'unten' ausführt, wenn er geklickt wird -->
+
+        <script>
+            function oben() {
+                // <!-- Definiert die Funktion 'oben' -->
+                let box = document.getElementById('box'); // <!-- Ruft das Element mit der ID 'box' ab -->
+                box.style.top = parseInt(box.style.top) + -10 + 'px'; // <!-- Ändert die obere Position des Elements um 10px nach oben -->
+            }
+
+            function lefty() {
+                // <!-- Definiert die Funktion 'lefty' -->
+                let box = document.getElementById('box'); // <!-- Ruft das Element mit der ID 'box' ab -->
+                box.style.left = parseInt(box.style.left) + -10 + 'px'; // <!-- Ändert die linke Position des Elements um 10px nach links -->
+            }
+
+            function rechts() {
+                // <!-- Definiert die Funktion 'rechts' -->
+                let box = document.getElementById('box'); // <!-- Ruft das Element mit der ID 'box' ab -->
+                box.style.left = parseInt(box.style.left) + 10 + 'px'; // <!-- Ändert die linke Position des Elements um 10px nach rechts -->
+            }
+
+            function unten() {
+                // <!-- Definiert die Funktion 'unten' -->
+                let box = document.getElementById('box'); // <!-- Ruft das Element mit der ID 'box' ab -->
+                box.style.top = parseInt(box.style.top) + 10 + 'px'; // <!-- Ändert die obere Position des Elements um 10px nach unten -->
+            }
+        </script>
+        <!-- Definiert interne JavaScript-Funktionen -->
+    </body>
+</html>

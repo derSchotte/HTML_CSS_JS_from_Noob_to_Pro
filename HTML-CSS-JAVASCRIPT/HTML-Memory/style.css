@@ -1,0 +1,81 @@
+:root {
+    /* Definiert eine Größe für die Karten und einen Abstand zwischen den Karten als CSS-Variablen */
+    --card-size: 14rem;
+    --card-gap: 0.8rem;
+}
+
+* {
+    /* Setzt das box-sizing auf border-box, um Padding und Border in die Breite und Höhe eines Elements einzubeziehen */
+    /* Setzt Margin und Padding aller Elemente auf 0 */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    /* Zentriert den Inhalt auf der Seite */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    /* Setzt die Hintergrundfarbe auf ein dunkles Blau */
+    background-color: #011016;
+}
+
+.memory-game {
+    /* Stellt die Speicherkarten in einer flexiblen Box dar und zentriert sie */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* Begrenzt die Breite des Spiels und setzt die Höhe auf automatisch */
+    width: 900px;
+    height: auto;
+    /* Setzt die Perspektive für 3D-Transformationen */
+    perspective: 1000px;
+}
+
+.memory-card {
+    /* Setzt die Größe und Position der Speicherkarten */
+    width: calc(var(--card-size) - var(--card-gap));
+    height: calc(var(--card-size) - var(--card-gap));
+    margin: 4px;
+    position: relative;
+    /* Behält die 3D-Positionierung bei Transformationen bei */
+    transform-style: preserve-3d;
+    /* Fügt eine Übergangseffekt hinzu, wenn die Karte gedreht wird */
+    transition: transform 0.5s;
+}
+
+.memory-card:hover {
+    /* Ändert den Cursor zu einem Zeiger, wenn er über einer Karte schwebt */
+    /* Verkleinert die Karte leicht und fügt einen Rand hinzu, wenn sie gehovert wird */
+    cursor: pointer;
+    transform: scale(0.97);
+    transition: transform 0.2s;
+    border: 2px solid #0e4e6e;
+    border-radius: 10px;
+}
+
+.memory-card.flip {
+    /* Dreht die Karte um 180 Grad, wenn die Klasse "flip" hinzugefügt wird */
+    transform: rotateY(180deg);
+    transition: transform 0.4s;
+}
+
+.front-face,
+.back-face {
+    /* Positioniert die Vorder- und Rückseite der Karten absolut */
+    /* Versteckt die Rückseite der Karten, wenn sie nicht sichtbar ist */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+}
+
+.front-face {
+    /* Dreht die Vorderseite der Karten um 180 Grad */
+    transform: rotateY(180deg);
+}

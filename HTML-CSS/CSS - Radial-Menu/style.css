@@ -1,0 +1,224 @@
+/* ------------- Color Variables ------------- */
+:root {
+    --dark-greyish-blue: #17141c;
+    --dark-grey-blue: #011016;
+    --dark-black: #051015;
+    --grey-10: #f5f5f5;
+    --grey-20: #ebebeb;
+    --grey-30: #e1e1e1;
+    --grey-40: #d7d7d7;
+    --grey-50: #cdcdcd;
+    --grey-60: #c3c3c3;
+    --grey-100: #a6a6a6;
+    --grey-200: #8a8a8a;
+    --grey-300: #6e6e6e;
+    --grey-400: #525252;
+    --grey-500: #363636;
+    --grey-600: #1e1e1e;
+    --grey-700: #020202;
+    --greyish-white: #dcdcdc;
+    --prime-orange: #ff8a00;
+    --prime-red: #dc2200;
+    --prime-dark-red: #ad1a00;
+    --prime-green: #3ecc13;
+    --prime-dark-green: #28a103;
+    --prime-blue: #39bbeb;
+    --prime-dark-blue: #179ccc;
+    --special: #924cff;
+}
+/* ** FiraCode ** */
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-Regular.ttf) format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-Medium.ttf) format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-SemiBold.ttf) format('truetype');
+    font-weight: 550;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-Bold.ttf) format('truetype');
+    font-weight: 600;
+}
+
+    /* ** BigNoodle ** */
+
+@font-face {
+    font-family: 'BigNoodle';
+    src: url(../../assets/fonts/big_noodle_titling.ttf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'BigNoodle';
+    src: url(../../assets/fonts/big_noodle_titling_oblique.ttf) format('truetype');
+    font-weight: 600;
+}
+
+/* ** Raleway ** */
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Thin.ttf) format('truetype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-ExtraLight.ttf) format('truetype');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Regular.ttf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Medium.ttf) format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Bold.ttf) format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-ExtraBold.ttf) format('truetype');
+    font-weight: 800;
+}
+
+/* ------------- Basic Styles ------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    /* color: var(--greyish-white); */
+}
+
+html,
+body {
+    font-family: 'Raleway', 'FiraCode', monospace;
+    font-weight: 400;
+    line-height: 1.5rem;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.05rem;
+    overflow-x: hidden;
+    background-color: var(--dark-greyish-blue);
+}
+
+img,
+video,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ------------- Main Styles ------------- */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.menu {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--grey-20);
+}
+
+.menu li {
+    position: absolute;
+    left:0;
+    list-style: none;
+    transition: 0.5s ease-in-out;
+    transition-delay: calc(0.1s * var(--i));
+    transform-origin: 140px;
+    transform: rotate(0deg) translateX(110px);
+}
+
+.menu.active li {
+    transform: rotate(calc(360deg / 8 * var(--i))) translateX(0px);
+}
+
+.menu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    color: var(--clr);
+    border: 2px solid var(--clr);
+    border-radius: 50%;
+    background: var(--grey-600);
+    transform: rotate(calc(360deg / -8 * var(--i))) translateX(0px);
+    transition: 1s;
+}
+
+.menu li a:hover {
+    transition: 0s;
+    background: var(--clr);
+    color: var(--dark-black);
+    box-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr);
+}
+
+.menu .toggle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: var(--grey-600);
+    border: 2px solid var(--grey-20);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+    font-size: 2rem;
+    transition: 1.25s ease-out;
+}
+
+.menu.active .toggle {
+    transform: rotate(315deg);
+}

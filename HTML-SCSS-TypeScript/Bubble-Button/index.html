@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="./src/assets/icons/Letter-F.svg"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Frank McDonald is a Frontend-Developer and Trainer for HTML, CSS and JavaScript"
+        />
+        <meta
+            name="keywords"
+            content="Frank McDonald, Frontend-Developer, Trainer, HTML, CSS, JavaScript"
+        />
+        <meta name="author" content="Frank McDonald" />
+        <!-- <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        /> -->
+        <script
+            src="https://kit.fontawesome.com/1613a72aec.js"
+            crossorigin="anonymous"
+        ></script>
+        <script type="module" src="./src/assets/ts/config.ts" defer></script>
+        <title>Frank McDonald - Frontend-Developer</title>
+    </head>
+    <body>
+        <svg class="filter" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter id="gooey">
+                    <feGaussianBlur
+                        in="SourceGraphic"
+                        stdDeviation="5"
+                        result="blur"
+                    />
+                    <feColorMatrix
+                        in="blur"
+                        mode="matrix"
+                        values="
+                        1 0 0 0 0
+                        0 1 0 0 0
+                        0 0 1 0 0
+                        0 0 0 19 -9
+                        "
+                        result="gooey"
+                    />
+                    <feComposite in="SourceGraphic" in2="gooey" operator="atop" />
+                </filter>
+            </defs>
+        </svg>
+
+        <div class="container">
+        <button id="gooey-button">
+            F*** Awesome
+            <span class="bubbles">
+                <span class="bubble" style="--i: 1;"></span>
+                <span class="bubble" style="--i: 2;"></span>
+                <span class="bubble" style="--i: 3;"></span>
+                <span class="bubble" style="--i: 4;"></span>
+                <span class="bubble" style="--i: 5;"></span>
+                <span class="bubble" style="--i: 6;"></span>
+                <span class="bubble" style="--i: 7;"></span>
+                <span class="bubble" style="--i: 8;"></span>
+                <span class="bubble" style="--i: 9;"></span>
+                <span class="bubble" style="--i: 10;"></span>
+        </button>
+    </div>
+    </body>
+</html>

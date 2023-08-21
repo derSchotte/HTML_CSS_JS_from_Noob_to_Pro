@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #011016;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+canvas {
+    background: radial-gradient(at 100% 80%, #022232 0%,#011016 40%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

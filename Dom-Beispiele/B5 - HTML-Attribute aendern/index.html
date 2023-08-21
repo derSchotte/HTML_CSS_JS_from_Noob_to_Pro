@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Erstellt einen Button, der die Funktion "changeAttribute" aufruft, wenn er geklickt wird -->
+        <button onclick="changeAttribute()">Attribut ändern</button>
+
+        <!-- Ein img-Element mit dem Pfad zur aktuellen Bildquelle, dem Alternativtext und einer ID -->
+        <img src="../../assets/images/beard1.png" alt="Beard" id="image" />
+
+        <script>
+            // Definiert die Funktion "changeAttribute"
+            function changeAttribute() {
+                // Findet das img-Element mit der ID "image" und ändert sein 'src'-Attribut
+                document
+                    .getElementById('image')
+                    .setAttribute('src', '../../assets/images/beard2.png');
+            }
+        </script>
+    </body>
+</html>

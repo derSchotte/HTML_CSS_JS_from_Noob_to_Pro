@@ -1,0 +1,151 @@
+@import 'basic.scss';
+
+// ** Your Style goes here **
+
+// ! ----- Core Style Rules -----
+
+body {
+    font-size: $font-size-step-300;
+    line-height: $space-s-m; // 1.6rem
+    text-shadow: 0 0.05rem 0.2rem rgba($dark-black, 0.2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $BigNoodle;
+    line-height: $space-xs-s; // 1.2rem
+    margin-bottom: $space-m; // 2rem
+
+}
+
+h1 {
+    font-size: $font-size-step-800; 
+}
+
+h2 {
+    font-size: $font-size-step-700; 
+}
+
+h3 {
+    font-size: $font-size-step-600; 
+}
+
+h4 {
+    font-size: $font-size-step-500; 
+}
+
+h5 {
+    font-size: $font-size-step-400; 
+}
+
+h6 {
+    font-size: $font-size-step-300; 
+}
+
+// ------------- Media Queries -------------
+
+html {
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    html,
+    body {
+        background-color: $bg-color;
+        color: $text-color;
+    }
+
+    a, i {
+        color: $text-color;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    html,
+    body {
+        background-color: $text-color;
+        color: $bg-color;
+    }
+
+    a {
+        color: $bg-color;
+    }
+}
+
+// ! ----- Main Styles -----
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+svg {
+    &.filter {
+        display: none;
+    }
+}
+
+button {
+    position: relative;
+    padding: $space-s $space-m;
+    font-size: $font-size-step-300;
+    color: $text-color-fliped;
+    background: $prime;
+    filter: url(#gooey);
+
+    &:focus {
+        outline: none;
+    }
+
+    & .bubbles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        & .bubble {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: $prime;
+            border-radius: 100%;
+            // z-index: -1;
+
+            @for $bubble from 1 through 10 {
+                &:nth-child(#{$bubble}) {
+                    $size: 1.2rem;
+                    left: (random(9) + 0.2)+rem;
+                    width: $size;
+                    height: $size;
+                    animation: move-#{$bubble} #{3 + $bubble * 0.02}s infinite;
+                    animation-delay: #{$bubble * 0.2}s;
+                }
+            }
+        }
+    }
+}
+
+@for $bubble from 1 through 10 {
+    @keyframes move-#{$bubble} {
+        0% {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+
+        75% {
+            opacity: 0.3;
+        }
+
+        99% {
+            transform: translate(0, -(random(8) + 3)+rem);
+        }
+        100% {
+            transform: translate(0, 0);
+            opacity: 0;
+        }
+    }
+}

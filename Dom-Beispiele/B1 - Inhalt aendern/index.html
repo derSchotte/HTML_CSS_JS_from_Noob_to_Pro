@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Erstellt einen Button, der die Funktion "changeText" aufruft, wenn er geklickt wird -->
+        <button onclick="changeText()">Text ändern</button>
+
+        <!-- Ein Absatz mit der ID "text", der den initialen Text "Hallo Welt" anzeigt -->
+        <p id="text">Hallo Welt</p>
+
+        <script>
+            // Definiert die Funktion "changeText"
+            function changeText() {
+                // Ändert den Inhalt des Absatzes mit der ID "text" zu einem neuen Text
+                document.getElementById('text').innerHTML =
+                    'Lorem ipsum dolor sit amet consectetur, adipisicing elit.';
+            }
+        </script>
+    </body>
+</html>

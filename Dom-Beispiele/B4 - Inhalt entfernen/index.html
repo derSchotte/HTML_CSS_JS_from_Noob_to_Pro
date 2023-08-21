@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Erstellt einen Button, der die Funktion "removeElement" aufruft, wenn er geklickt wird -->
+        <button onclick="removeElement()">Inhalt entfernen</button>
+
+        <!-- Ein div-Element mit der ID "content", das ein Absatzelement enthält -->
+        <div id="content">
+            <!-- Ein Absatzelement mit der ID "text", das den zu entfernenden Text enthält -->
+            <p id="text">Dieser Text wird entfernt.</p>
+        </div>
+
+        <script>
+            // Definiert die Funktion "removeElement"
+            function removeElement() {
+                // Findet das div-Element mit der ID "content"
+                const element = document.getElementById('content');
+                // Findet das Absatzelement mit der ID "text"
+                const child = document.getElementById('text');
+                // Entfernt das Absatzelement aus dem div-Element
+                element.removeChild(child);
+
+                // Die folgenden Zeilen sind auskommentiert und werden nicht ausgeführt:
+
+                // Diese Zeile würde das gesamte div-Element mit der ID "content" entfernen
+                // document.getElementById('content').remove();
+
+                // Diese Zeile würde das Absatzelement mit der ID "text" finden, aber nichts damit machen
+                // document.getElementById('text');
+
+                // Diese Zeile würde das zuletzt gefundene Element (in diesem Fall das div-Element) entfernen
+                // element.remove();
+            }
+        </script>
+    </body>
+</html>

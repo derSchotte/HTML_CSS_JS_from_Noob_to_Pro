@@ -1,0 +1,312 @@
+/* ------------- Color Variables ------------- */
+:root {
+    --dark-greyish-blue: #17141c;
+    --dark-grey-blue: #011016;
+    --dark-black: #051015;
+    --grey-10: #f5f5f5;
+    --grey-20: #ebebeb;
+    --grey-30: #e1e1e1;
+    --grey-40: #d7d7d7;
+    --grey-50: #cdcdcd;
+    --grey-60: #c3c3c3;
+    --grey-100: #a6a6a6;
+    --grey-200: #8a8a8a;
+    --grey-300: #6e6e6e;
+    --grey-400: #525252;
+    --grey-500: #363636;
+    --grey-600: #1e1e1e;
+    --grey-700: #020202;
+    --greyish-white: #dcdcdc;
+    --prime-orange: #ff8a00;
+    --prime-red: #dc2200;
+    --prime-dark-red: #ad1a00;
+    --prime-green: #3ecc13;
+    --prime-dark-green: #28a103;
+    --prime-blue: #39bbeb;
+    --prime-dark-blue: #179ccc;
+    --special: #924cff;
+    --neon-lite-cyan: #4deeea;
+    --neon-cyan: #00c6fb;
+    --neon-lite-green: #74ee15;
+    --neon-green: #00ff00;
+    --neon-lite-yellow: #ffe700;
+    --neon-yellow: #ffcc00;
+    --neon-lite-magenta: #f000ff;
+    --neon-magenta: #ff00ff;
+    --neon-lite-red: #ff006e;
+    --neon-red: #ff0000;
+}
+/* ** FiraCode ** */
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-Regular.ttf) format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-Medium.ttf) format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-SemiBold.ttf) format('truetype');
+    font-weight: 550;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url(../../assets/fonts/FiraCode-Bold.ttf) format('truetype');
+    font-weight: 600;
+}
+
+    /* ** BigNoodle ** */
+
+@font-face {
+    font-family: 'BigNoodle';
+    src: url(../../assets/fonts/big_noodle_titling.ttf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'BigNoodle';
+    src: url(../../assets/fonts/big_noodle_titling_oblique.ttf) format('truetype');
+    font-weight: 600;
+}
+
+/* ** Raleway ** */
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Thin.ttf) format('truetype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-ExtraLight.ttf) format('truetype');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Regular.ttf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Medium.ttf) format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-Bold.ttf) format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../../assets/fonts/Raleway-ExtraBold.ttf) format('truetype');
+    font-weight: 800;
+}
+
+/* ------------- Basic Styles ------------- */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    font-family: 'Raleway', 'FiraCode', monospace;
+    font-weight: 400;
+    line-height: 1.5rem;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.05rem;
+    overflow-x: hidden;
+    color: var(--greyish-white);
+    background-color: var(--dark-greyish-blue);
+}
+
+img,
+video,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ------------- Main Styles ------------- */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    min-height: 100vh;
+}
+
+header {
+    position: sticky;
+    top: 30px;
+    z-index: 100;
+    background-color: var(--dark-greyish-blue);
+    backdrop-filter: blur(0.5rem);
+    -webkit-backdrop-filter: blur(0.5rem);
+    padding-block: 1rem;
+    border-bottom: 0.1rem solid var(--grey-500);
+}
+
+.wrapper {
+    max-width: 50rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+.site-title {
+    font-family: 'BigNoodle', 'FiraCode', monospace;
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 1.2rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'BigNoodle', 'FiraCode', monospace;
+    font-size: 3rem;
+    margin-block: 1rem;
+}
+
+p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+}
+
+section {
+    padding-block: 8rem;
+}
+
+/* ------------- Section Styles ------------- */
+
+.diagonal {
+    --skewY-angle: -5deg;
+
+    --linear-background: linear-gradient(45deg, var(--neon-cyan), var(--neon-lite-magenta));
+
+    position: relative;
+    isolation: isolate;
+}
+
+.diagonal::after {
+    content: '';
+    background: var(--linear-background);
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    transform: skewY(var(--skewY-angle));
+}
+
+.spikes {
+    --spike-height: 10px;
+    --spike-width: 50px;
+    --spikes-clr: var(--dark-greyish-blue);
+
+    position: relative;
+    color: var(--dark-grey-blue);
+    background: linear-gradient(to right, var(--neon-yellow), var(--prime-orange));
+}
+
+.spikes::before,
+.spikes::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: var(--spike-height);
+    background: var(--spikes-clr);
+    -webkit-mask-image: url(../../assets/svg-path/triangle.svg);
+    -webkit-mask-size: var(--spike-width) var(--spike-height);
+    mask-image: url(../../assets/svg-path/triangle.svg);
+    mask-size: var(--spike-width) var(--spike-height);
+}
+
+.spikes::before {
+    top: 0;
+}
+
+.spikes::after {
+    bottom: 0;
+    transform: rotate(.5turn);
+    transform: scaleY(-1);
+}
+
+.wavy {
+    /* Mask created with https://css-generators.com/wavy-shapes/ */
+
+    position: relative;
+    background: linear-gradient(to right, var(--neon-green), var(--neon-cyan));
+    color: var(--dark-grey-blue);
+
+    --mask:
+        radial-gradient(40.31px at 50% 55.00px,#000 99%,#0000 101%) calc(50% - 40px) 0/80px 51% repeat-x,
+        radial-gradient(40.31px at 50% -35px,#0000 99%,#000 101%) 50% 20px/80px calc(51% - 20px) repeat-x,
+        radial-gradient(40.31px at 50% calc(100% - 55.00px),#000 99%,#0000 101%) calc(50% - 40px) 100%/80px 51% repeat-x,
+        radial-gradient(40.31px at 50% calc(100% + 35.00px),#0000 99%,#000 101%) 50% calc(100% - 20px)/80px calc(51% - 20px) repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+}
+
+.polygon {
+    position: relative;
+    background: linear-gradient(to left, var(--neon-lite-yellow), var(--neon-lite-cyan));
+    color: var(--dark-grey-blue);
+}
+
+.polygon::before,
+.polygon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background: var(--dark-greyish-blue);
+}
+
+.polygon::before {
+    top: 0;
+    clip-path: polygon(100% 100%, 0 100%, 50% 0);
+    transform: rotate(.5turn);
+}
+
+.polygon::after {
+    bottom: -0.5px;
+    clip-path: polygon(100% 100%, 0% 100%, 50% 0);
+}

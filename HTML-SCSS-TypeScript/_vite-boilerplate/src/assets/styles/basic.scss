@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 // ------------- Color Variables -------------
 
 $text-color: #dcdcdc;
@@ -182,33 +186,115 @@ $Raleway: 'Raleway';
     font-weight: 800;
 }
 
-// ------------- Basic Styles -------------
+// ------------- new Basic Styles Reset-------------
+// https://piccalil.li/blog/a-modern-css-reset
+// Made some changes to the original code
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     border: none;
     outline: none;
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/**
+ * Der folgende Code setzt die list-style-Eigenschaft auf "none" für ul- und ol-Elemente mit dem Attribut role='list'.
+ * Dadurch werden die Standard-Aufzählungspunkte (wie Bulletpoints oder Zahlen) entfernt.
+ * Dies ist nützlich, wenn benutzerdefinierte Aufzählungsstile verwendet werden sollen oder wenn keine Aufzählung gewünscht ist.
+ */
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/**
+ * Der folgende Code setzt das scroll-behavior-Attribut auf "smooth" für das html-Element,
+ * wenn es den Fokus erhält (wenn ein Element innerhalb des html-Elements ausgewählt wird).
+ * Dies führt dazu, dass ein sanftes Scrollen zu dem ausgewählten Element ausgeführt wird.
+ * Die Verwendung von smooth beim Scrollen kann eine angenehmere Benutzererfahrung bieten.
+ */
+ 
+html:focus-within {
     scroll-behavior: smooth;
 }
 
+/**
+ * Der folgende Code legt die Stileigenschaften für das body-Element fest.
+ * 
+ * min-height: 100vh; - Setzt die Mindesthöhe des body-Elements auf 100% der Bildschirmhöhe.
+ * Dies stellt sicher, dass der Body-Bereich immer mindestens die gesamte Höhe des Viewports einnimmt.
+ * 
+ * text-rendering: optimizeSpeed; - Optimiert die Geschwindigkeit der Textdarstellung.
+ * Dies kann dazu beitragen, dass der Text schneller gerendert wird und eine flüssigere Benutzererfahrung ermöglicht.
+ * 
+ * line-height: 1.5; - Legt den Zeilenabstand (line-height) des Textes im Body-Element auf den Wert 1.5 fest.
+ * Ein größerer Zeilenabstand kann zu einer besseren Lesbarkeit des Textes führen.
+ */
+ 
 html,
 body {
+    height: 100%;
+}
+
+ body {
+    text-rendering: optimizeSpeed;
     font-family: $Raleway;
     font-weight: 400;
     font-size: $font-size-step-200;
-    line-height: 1.6rem;
+    // line-height: calc($font-size-step-300 + 0.6rem);
     word-spacing: 0.2rem;
     letter-spacing: 0.2rem;
     overflow-x: hidden;
 }
 
+/**
+ * Der folgende Code legt die Stileigenschaften für Links fest, die kein class-Attribut haben.
+ * 
+ * text-decoration-skip-ink: auto; - Diese Eigenschaft steuert das Überspringen von Tinte (Tintensparmodus) bei der Textdekoration für Links.
+ * Wenn der Wert auf "auto" gesetzt ist, wird der Tintensparmodus automatisch angewendet, basierend auf den Einstellungen des Browsers.
+ * Dies kann dazu beitragen, dass die Textdekoration besser lesbar bleibt und nicht von der Tinte verwischt oder übermalt wird.
+ */
+ 
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
 img,
 video,
-svg {
+svg, 
+picture, 
+canvas {
     max-width: 100%;
-    height: auto;
+    display: block;
+}
+
+@media(prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

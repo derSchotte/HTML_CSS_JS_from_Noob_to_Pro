@@ -111,6 +111,21 @@ html {
         transform: skewX(2deg) skewY(4deg);
         background: linear-gradient(315deg, $neon-magenta, $bg-color, $prime-blue);
         filter: blur(3rem);
+        animation: pulse 3s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            filter: blur(0rem);
+        }
+        
+        50% {
+            filter: blur(3rem);
+        }
+
+        100% {
+            filter: blur(0rem);
+        }
     }
 
     & span {

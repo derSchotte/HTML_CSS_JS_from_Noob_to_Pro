@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Learning with Balance",
+  "description": "A Chrome extension, for more balance in learning. With 25 minutes phases for 'learning', and 5 minutes phases for 'breaks'.",
+  "version": "0.2",
+  "action": {
+    "default_icon": "./assets/images/icon.png",
+    "default_popup": "./popup.html"
+  },
+  "background": {
+    "service_worker": "./assets/js/background.js"
+  },
+  "permissions": [
+    "alarms",
+    "notifications"
+  ]
+}
